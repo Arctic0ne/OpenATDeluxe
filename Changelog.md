@@ -1,0 +1,3 @@
+- Added keyboard shortcuts for moving to rooms
+	- BUG: Currently just teleports to room, does not move
+	- BUG: (Related to previous) When leaving a room you are teleported to the wrong door

@@ -1,3 +1,4 @@
 - Added keyboard shortcuts for moving to rooms
-	- BUG: Currently just teleports to room, does not move
-	- BUG: (Related to previous) When leaving a room you are teleported to the wrong door
+	- BUG: Camera does not follow player
+	- BUG: Office doesn't work at all for some reason
+	- BUG: Some places you leave from a weird spot

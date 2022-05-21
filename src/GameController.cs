@@ -47,6 +47,7 @@ public class GameController : Node2D {
 		GetTree().Connect("screen_resized", this, "OnScreenSizeChanged");
 	}
 
+	// This whole block runs twice on key press, I believe once for the key down and one for key up, needs fix, but doesn't seem to affect functionality
 	public override void _UnhandledInput(InputEvent @event)
 	{
 		if (@event is InputEventKey k)
@@ -56,6 +57,7 @@ public class GameController : Node2D {
 			//				//onUnhandledInput?.Invoke();
 			//				fastForward = k.Pressed;
 			//			}
+
 			switch (k.Scancode)
 			{
 				// Speed up time x20
@@ -65,87 +67,88 @@ public class GameController : Node2D {
 					break;
 				// Move to Petrol Air
 				case (int)KeyList.A:
-					RoomManager.ChangeRoom("RoomArabAir", false);
+					Keyboard.moveToRoom("ArabAir");
 					break;
 				// Move to Bank
 				case (int)KeyList.B:
-					RoomManager.ChangeRoom("RoomBank", false);
+					Keyboard.moveToRoom("Bank");
 					break;
 				// Move to Rick's Cafe
 				case (int)KeyList.C:
-					RoomManager.ChangeRoom("RoomCafe", false);
+					Keyboard.moveToRoom("Cafe");
 					break;
 				// Move to Duty-Free Shop
 				case (int)KeyList.D:
-					RoomManager.ChangeRoom("RoomDutyFree", false);
+					Keyboard.moveToRoom("DutyFree");
 					break;
 				// Move to plane dealer
 				//case (int)KeyList.E:
-				//	RoomManager.ChangeRoom("RoomPlaneDealer", false);
+				//	Keyboard.moveToRoom("PlaneDealer");
 				//	break;
 				// Move to Office and open Globe
 				//case (int)KeyList.G:
+				//	Keyboard.moveToRoom("Office");
 				//	RoomManager.ChangeRoom("RoomGlobe", false);
 				//	break;
 				// Move to cargo office
 				case (int)KeyList.H:
-					RoomManager.ChangeRoom("RoomCargo", false);
+					Keyboard.moveToRoom("Cargo");
 					break;
 				// Move to advertising agency
 				case (int)KeyList.I:
-					RoomManager.ChangeRoom("RoomMarketing", false);
+					Keyboard.moveToRoom("Marketing");
 					break;
 				// Move to newspaper stand
 				case (int)KeyList.K:
-					RoomManager.ChangeRoom("RoomKiosk", false);
+					Keyboard.moveToRoom("Kiosk");
 					break;
 				// Move to Last Minute counter
 				case (int)KeyList.L:
-					RoomManager.ChangeRoom("RoomLastMinute", false);
+					Keyboard.moveToRoom("LastMinute");
 					break;
 				// Move to museum
 				case (int)KeyList.M:
-					RoomManager.ChangeRoom("RoomMuseum", false);
+					Keyboard.moveToRoom("Museum");
 					break;
 				// Move to NASA Shop
 				//case (int)KeyList.N:
-				//	RoomManager.ChangeRoom("RoomNASA", false);
+				//	Keyboard.moveToRoom("NASA");
 				//	break;
 				// Move to your Office
 				case (int)KeyList.O:
-					RoomManager.ChangeRoom("RoomOffice", false);
+					Keyboard.moveToRoom("Office");
 					break;
 				// Move to Personnel Office
-				case (int)KeyList.P:
-					RoomManager.ChangeRoom("RoomPersonnel", false);
-					break;
+				//case (int)KeyList.P:
+				//	Keyboard.moveToRoom("Personnel");
+				//	break;
 				// Move to Route Management Board
 				//case (int)KeyList.R:
-				//	RoomManager.ChangeRoom("RoomRoute", false);
+				//	Keyboard.moveToRoom("RouteBoard");
 				//	break;
 				// Move to Telescope (Check score)
-				case (int)KeyList.S:
-					RoomManager.ChangeRoom("RoomScore", false);
-					break;
+				//case (int)KeyList.S:
+				//	Keyboard.moveToRoom("Telescope");
+				//	break;
 				// Move to Air Travel Counter
 				case (int)KeyList.T:
-					RoomManager.ChangeRoom("RoomAirTravel", false);
+					Keyboard.moveToRoom("AirTravel");
 					break;
 				// Move to airport management (Mr. Uhrig)
 				case (int)KeyList.U:
-					RoomManager.ChangeRoom("RoomManager", false);
+					Keyboard.moveToRoom("Manager");
 					break;
 				// Move to Workshop
 				//case (int)KeyList.W:
-				//	RoomManager.ChangeRoom("RoomWorkshop", false);
+				//	Keyboard.moveToRoom("Workshop");
 				//	break;
 				// Move to Hi-Tech Design Shop
 				//case (int)KeyList.X:
-				//	RoomManager.ChangeRoom("RoomDesign", false);
+				//	Keyboard.moveToRoom("Design");
 				//	break;
 				// Move to Security Office
 				//case (int)KeyList.Y:
-				//	RoomManager.ChangeRoom("RoomSecurity", false);
+				//	Keyboard.moveToRoom("Security");
 				//	break;
 			}
 		}

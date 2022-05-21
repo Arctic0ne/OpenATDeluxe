@@ -150,6 +150,33 @@ public class GameController : Node2D {
 				//case (int)KeyList.Y:
 				//	Keyboard.moveToRoom("Security");
 				//	break;
+				case (int)KeyList.Escape:
+					//Quit game
+					break;
+				case (int)KeyList.Tab:
+					//Player immediately quits to go home
+					break;
+				case (int)KeyList.F1:
+					//Call up a tool tip
+					break;
+				case (int)KeyList.F2:
+					//Display options
+					break;
+				case (int)KeyList.F3:
+					//Load Game
+					break;
+				case (int)KeyList.F4:
+					//Save game
+					break;
+				case (int)KeyList.Pause:
+					//Toggle pause on and off
+					break;
+				case (int)KeyList.Plus:
+					//Speed up game
+					break;
+				case (int)KeyList.Minus:
+					//Slow down game
+					break;
 			}
 		}
 		if (@event is InputEventMouseButton m)

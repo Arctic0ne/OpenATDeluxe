@@ -69,8 +69,6 @@ public class BaseCharacter : AnimatedSprite {
 
 
 		shiftsFloor = mainGoal.y > ShiftHeight & Position.y < ShiftHeight | mainGoal.y < ShiftHeight & Position.y > ShiftHeight;
-		GD.Print("_goal x" + _goal.x.ToString() + ", y" + _goal.y.ToString());
-		GD.Print("shiftsFloor=" + shiftsFloor.ToString());
 
 		OnPathFinished = null; //They probably don't want to talk to us anymore
 		OnGoalReached = null;
